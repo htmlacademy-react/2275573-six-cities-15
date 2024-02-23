@@ -1,19 +1,19 @@
 import { PlaceCardProps } from '../../const/cards-mock';
 
-function PlaceCard({ environment, isPremium, link, image, name, price, isFavorite, rating, type }: PlaceCardProps): JSX.Element {
+function PlaceCard({ location, isPremium, link, image, name, price, isFavorite, rating, type }: PlaceCardProps): JSX.Element {
   const imageSize = {
-    width: ((environment === 'cities') || (environment === 'near-places')) ? 260 : 150,
-    height: ((environment === 'cities') || (environment === 'near-places')) ? 200 : 110,
+    width: ((location === 'cities') || (location === 'near-places')) ? 260 : 150,
+    height: ((location === 'cities') || (location === 'near-places')) ? 200 : 110,
   };
 
   return (
-    <article className={`${environment}__card place-card`}>
+    <article className={`${location}__card place-card`}>
       {isPremium && (
         <div className="place-card__mark">
           <span>Premium</span>
         </div>
       )}
-      <div className={`${environment}__image-wrapper place-card__image-wrapper`}>
+      <div className={`${location}__image-wrapper place-card__image-wrapper`}>
         <a href={link}>
           <img
             className="place-card__image"

@@ -9,7 +9,7 @@ function NearPlaces(): JSX.Element {
       </h2>
       <div className="near-places__list places__list">
         {CARDS_MOCK.map((item) =>
-          (<PlaceCard environment='cities' key={`${item.id}`} {...item} />)).slice(0, 3)}
+          (<PlaceCard location='cities' key={`${item.id}`} {...item} />)).slice(0, 3)}
       </div>
     </section>
   );

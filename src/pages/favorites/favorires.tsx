@@ -21,8 +21,8 @@ function Favorites(): JSX.Element {
                   </div>
                 </div>
                 <div className="favorites__places">
-                  <PlaceCard environment='favorites' {...CARDS_MOCK[1]} />
-                  <PlaceCard environment='favorites' {...CARDS_MOCK[3]} />
+                  <PlaceCard location='favorites' {...CARDS_MOCK[1]} />
+                  <PlaceCard location='favorites' {...CARDS_MOCK[3]} />
                 </div>
               </li>
               <li className="favorites__locations-items">
@@ -34,7 +34,7 @@ function Favorites(): JSX.Element {
                   </div>
                 </div>
                 <div className="favorites__places">
-                  <PlaceCard environment='favorites' {...CARDS_MOCK[1]} />
+                  <PlaceCard location='favorites' {...CARDS_MOCK[1]} />
                 </div>
               </li>
             </ul>

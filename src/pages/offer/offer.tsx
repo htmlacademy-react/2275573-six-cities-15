@@ -225,7 +225,7 @@ function Offer(): JSX.Element {
               </section>
             </div>
           </div>
-          <Map environment='offer' />
+          <Map location='offer' />
         </section>
         <div className="container">
           <NearPlaces />
