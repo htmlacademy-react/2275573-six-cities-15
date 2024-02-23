@@ -1,5 +1,5 @@
 export type PlaceCardProps = {
-  environment?: string;
+  location?: string;
   name: string;
   type: string;
   link: string;

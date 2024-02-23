@@ -1,10 +1,10 @@
-type MapEnvironment = {
-  environment: string;
+type MapLocation = {
+  location: string;
 }
 
-function Map({ environment }: MapEnvironment): JSX.Element {
+function Map({ location }: MapLocation): JSX.Element {
   return (
-    <section className={`${environment}__map map`} />
+    <section className={`${location}__map map`} />
   );
 }
 

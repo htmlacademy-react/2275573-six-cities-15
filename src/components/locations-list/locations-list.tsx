@@ -1,6 +1,6 @@
 import { CITIES } from '../../const/const';
 
-const LocationItem = ({ city }: { city: string }) => (
+const LocationsItem = ({ city }: { city: string }) => (
   <li className="locations__item">
     <a className="locations__item-link tabs__item}" href="#">
       <span>{city}</span>
@@ -8,13 +8,13 @@ const LocationItem = ({ city }: { city: string }) => (
   </li>
 );
 
-function LocationList(): JSX.Element {
+function LocationsList(): JSX.Element {
   return (
     <ul className="locations__list tabs__list">
-      {CITIES.map((item) => (<LocationItem city={item} key={item} />))}
+      {CITIES.map((item) => (<LocationsItem city={item} key={item} />))}
     </ul>
   );
 }
 
 
-export default LocationList;
+export default LocationsList;
