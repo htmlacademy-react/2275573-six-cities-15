@@ -3,11 +3,16 @@ import OfferGallery from '../../components/offers/offer-gallery/offer-gallery';
 import OfferInside from '../../components/offers/offer-inside/offer-inside';
 import NearPlaces from '../../components/offers/near-places/near-places';
 import Map from '../../components/map/map';
+import { Location } from '../../const/const';
+import { Helmet } from 'react-helmet-async';
 
 
 function Offer(): JSX.Element {
   return (
     <div className="page">
+      <Helmet>
+        <title>About location</title>
+      </Helmet>
       <Header />
       <main className="page__main page__main--offer">
         <section className="offer">
@@ -225,7 +230,7 @@ function Offer(): JSX.Element {
               </section>
             </div>
           </div>
-          <Map location='offer' />
+          <Map location={Location.Offer} />
         </section>
         <div className="container">
           <NearPlaces />

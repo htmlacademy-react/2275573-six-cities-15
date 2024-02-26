@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+import { AppRoute } from '../../const/const';
 import { PlaceCardProps } from '../../const/cards-mock';
 
 function PlaceCard({ location, isPremium, link, image, name, price, isFavorite, rating, type }: PlaceCardProps): JSX.Element {
@@ -14,7 +16,7 @@ function PlaceCard({ location, isPremium, link, image, name, price, isFavorite, 
         </div>
       )}
       <div className={`${location}__image-wrapper place-card__image-wrapper`}>
-        <a href={link}>
+        <Link to={AppRoute.Offer}>
           <img
             className="place-card__image"
             src={image}
@@ -22,7 +24,7 @@ function PlaceCard({ location, isPremium, link, image, name, price, isFavorite, 
             height={imageSize.height}
             alt={name}
           />
-        </a>
+        </Link>
       </div>
       <div className="place-card__info">
         <div className="place-card__price-wrapper">
@@ -60,6 +62,5 @@ function PlaceCard({ location, isPremium, link, image, name, price, isFavorite, 
     </article>
   );
 }
-
 
 export default PlaceCard;

@@ -1,12 +1,19 @@
+import { Link } from 'react-router-dom';
 import { CITIES } from '../../const/const';
 
-const LocationsItem = ({ city }: { city: string }) => (
-  <li className="locations__item">
-    <a className="locations__item-link tabs__item}" href="#">
-      <span>{city}</span>
-    </a>
-  </li>
-);
+type CityProps = {
+  city: string;
+}
+
+function LocationsItem({ city }: CityProps): JSX.Element {
+  return (
+    <li className="locations__item">
+      <Link className="locations__item-link tabs__item" to="#">
+        <span>{city}</span>
+      </Link>
+    </li>
+  );
+}
 
 function LocationsList(): JSX.Element {
   return (
