@@ -14,7 +14,7 @@ function OfferGallery(): JSX.Element {
   return (
     <div className="offer__gallery-container container">
       <div className="offer__gallery">
-        {offerImages.map((offerImage, i) => <OfferGalleryItem offerImage={offerImage} key={offerImage[i]} />)}
+        {offerImages.map((image) => <OfferGalleryItem offerImage={image} key={image} />)}
       </div>
     </div>
   );

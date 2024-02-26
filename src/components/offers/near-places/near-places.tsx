@@ -8,8 +8,8 @@ function NearPlaces(): JSX.Element {
         Other places in the neighbourhood
       </h2>
       <div className="near-places__list places__list">
-        {CARDS_MOCK.map((item) =>
-          (<PlaceCard location='cities' key={`${item.id}`} {...item} />)).slice(0, 3)}
+        {CARDS_MOCK.slice(0, 3).map((item) =>
+          (<PlaceCard location='cities' key={`${item.id}`} {...item} />))}
       </div>
     </section>
   );
