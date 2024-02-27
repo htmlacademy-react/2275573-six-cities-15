@@ -26,19 +26,14 @@ function App({ resultCount }: AppProps): JSX.Element {
           />
           <Route
             path={AppRoute.Login}
-            element={
-              <PrivateRoute
-                authorizationStatus={AuthorizationStatus.Auth}
-              >
-                <LoginPage />
-              </PrivateRoute>
-            }
+            element={<LoginPage />}
           />
+
           <Route
             path={AppRoute.Favorites}
             element={
               <PrivateRoute
-                authorizationStatus={AuthorizationStatus.Auth}
+                authorizationStatus={AuthorizationStatus.NoAuth}
               >
                 <Favorites />
               </PrivateRoute>
