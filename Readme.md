@@ -1,7 +1,7 @@
 # Личный проект «Шесть городов»
 
 * Студент: [Анна Игнатова](https://up.htmlacademy.ru/react/15/user/2275573).
-* Наставник: [Иван Некипелов](https://htmlacademy.ru/profile/jedi).
+* Наставник: [Дмитрий Свиридов](https://htmlacademy.ru/profile/slamach).
 
 ---
 

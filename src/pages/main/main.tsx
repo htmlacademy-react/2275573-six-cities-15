@@ -1,8 +1,10 @@
+import { Helmet } from 'react-helmet-async';
 import Header from '../../components/header/header';
 import LocationsList from '../../components/locations-list/locations-list';
 import PlaceCard from '../../components/place-card/place-card';
 import Map from '../../components/map/map';
 import Sort from '../../components/sort/sort';
+import { Location } from '../../const/const';
 import { CARDS_MOCK } from '../../const/cards-mock';
 
 type MainProps = {
@@ -14,6 +16,9 @@ function Main({ resultCount }: MainProps): JSX.Element {
     <div className="page page--gray page--main">
       <Header />
       <main className="page__main page__main--index">
+        <Helmet>
+          <title>Cities</title>
+        </Helmet>
         <h1 className="visually-hidden">Cities</h1>
         <div className="tabs">
           <section className="locations container">
@@ -28,11 +33,11 @@ function Main({ resultCount }: MainProps): JSX.Element {
               <Sort />
               <div className="cities__places-list places__list tabs__content">
                 {CARDS_MOCK.map((item) =>
-                  (<PlaceCard location='cities' key={`${item.id}`} {...item} />))}
+                  (<PlaceCard location={Location.Cities} key={`${item.id}`} {...item} />))}
               </div>
             </section>
             <div className="cities__right-section">
-              <Map location='cities' />
+              <Map location={Location.Cities} />
             </div>
           </div>
         </div>
